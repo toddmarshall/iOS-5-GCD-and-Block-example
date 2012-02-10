@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E571D2CA14E5E44B00360C40 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E571D2C914E5E44B00360C40 /* UIKit.framework */; };
+		E571D2CC14E5E44B00360C40 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E571D2CB14E5E44B00360C40 /* Foundation.framework */; };
+		E571D2CE14E5E44B00360C40 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E571D2CD14E5E44B00360C40 /* CoreGraphics.framework */; };
+		E571D2D414E5E44B00360C40 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E571D2D214E5E44B00360C40 /* InfoPlist.strings */; };
+		E571D2D614E5E44B00360C40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E571D2D514E5E44B00360C40 /* main.m */; };
+		E571D2DA14E5E44B00360C40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E571D2D914E5E44B00360C40 /* AppDelegate.m */; };
+		E571D2DD14E5E44B00360C40 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E571D2DB14E5E44B00360C40 /* MainStoryboard.storyboard */; };
+		E571D2E014E5E44B00360C40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E571D2DF14E5E44B00360C40 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E571D2C514E5E44B00360C40 /* BlockGCDTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockGCDTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E571D2C914E5E44B00360C40 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E571D2CB14E5E44B00360C40 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E571D2CD14E5E44B00360C40 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E571D2D114E5E44B00360C40 /* BlockGCDTest-Info.plist */ = {isa = PBXFileReference; path = "BlockGCDTest-Info.plist"; sourceTree = "<group>"; };
+		E571D2D314E5E44B00360C40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E571D2D514E5E44B00360C40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E571D2D714E5E44B00360C40 /* BlockGCDTest-Prefix.pch */ = {isa = PBXFileReference; path = "BlockGCDTest-Prefix.pch"; sourceTree = "<group>"; };
+		E571D2D814E5E44B00360C40 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		E571D2D914E5E44B00360C40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E571D2DC14E5E44B00360C40 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		E571D2DE14E5E44B00360C40 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		E571D2DF14E5E44B00360C40 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E571D2C214E5E44B00360C40 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E571D2CA14E5E44B00360C40 /* UIKit.framework in Frameworks */,
+				E571D2CC14E5E44B00360C40 /* Foundation.framework in Frameworks */,
+				E571D2CE14E5E44B00360C40 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E571D2BA14E5E44B00360C40 = {
+			isa = PBXGroup;
+			children = (
+				E571D2CF14E5E44B00360C40 /* BlockGCDTest */,
+				E571D2C814E5E44B00360C40 /* Frameworks */,
+				E571D2C614E5E44B00360C40 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E571D2C614E5E44B00360C40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E571D2C514E5E44B00360C40 /* BlockGCDTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E571D2C814E5E44B00360C40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E571D2C914E5E44B00360C40 /* UIKit.framework */,
+				E571D2CB14E5E44B00360C40 /* Foundation.framework */,
+				E571D2CD14E5E44B00360C40 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E571D2CF14E5E44B00360C40 /* BlockGCDTest */ = {
+			isa = PBXGroup;
+			children = (
+				E571D2D814E5E44B00360C40 /* AppDelegate.h */,
+				E571D2D914E5E44B00360C40 /* AppDelegate.m */,
+				E571D2DB14E5E44B00360C40 /* MainStoryboard.storyboard */,
+				E571D2DE14E5E44B00360C40 /* ViewController.h */,
+				E571D2DF14E5E44B00360C40 /* ViewController.m */,
+				E571D2D014E5E44B00360C40 /* Supporting Files */,
+			);
+			path = BlockGCDTest;
+			sourceTree = "<group>";
+		};
+		E571D2D014E5E44B00360C40 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E571D2D114E5E44B00360C40 /* BlockGCDTest-Info.plist */,
+				E571D2D214E5E44B00360C40 /* InfoPlist.strings */,
+				E571D2D514E5E44B00360C40 /* main.m */,
+				E571D2D714E5E44B00360C40 /* BlockGCDTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E571D2C414E5E44B00360C40 /* BlockGCDTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E571D2E314E5E44B00360C40 /* Build configuration list for PBXNativeTarget "BlockGCDTest" */;
+			buildPhases = (
+				E571D2C114E5E44B00360C40 /* Sources */,
+				E571D2C214E5E44B00360C40 /* Frameworks */,
+				E571D2C314E5E44B00360C40 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockGCDTest;
+			productName = BlockGCDTest;
+			productReference = E571D2C514E5E44B00360C40 /* BlockGCDTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E571D2BC14E5E44B00360C40 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "SunGard Global Services";
+			};
+			buildConfigurationList = E571D2BF14E5E44B00360C40 /* Build configuration list for PBXProject "BlockGCDTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E571D2BA14E5E44B00360C40;
+			productRefGroup = E571D2C614E5E44B00360C40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E571D2C414E5E44B00360C40 /* BlockGCDTest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E571D2C314E5E44B00360C40 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E571D2D414E5E44B00360C40 /* InfoPlist.strings in Resources */,
+				E571D2DD14E5E44B00360C40 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E571D2C114E5E44B00360C40 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E571D2D614E5E44B00360C40 /* main.m in Sources */,
+				E571D2DA14E5E44B00360C40 /* AppDelegate.m in Sources */,
+				E571D2E014E5E44B00360C40 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E571D2D214E5E44B00360C40 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E571D2D314E5E44B00360C40 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E571D2DB14E5E44B00360C40 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E571D2DC14E5E44B00360C40 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E571D2E114E5E44B00360C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E571D2E214E5E44B00360C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E571D2E414E5E44B00360C40 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockGCDTest/BlockGCDTest-Prefix.pch";
+				INFOPLIST_FILE = "BlockGCDTest/BlockGCDTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E571D2E514E5E44B00360C40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlockGCDTest/BlockGCDTest-Prefix.pch";
+				INFOPLIST_FILE = "BlockGCDTest/BlockGCDTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E571D2BF14E5E44B00360C40 /* Build configuration list for PBXProject "BlockGCDTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E571D2E114E5E44B00360C40 /* Debug */,
+				E571D2E214E5E44B00360C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E571D2E314E5E44B00360C40 /* Build configuration list for PBXNativeTarget "BlockGCDTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E571D2E414E5E44B00360C40 /* Debug */,
+				E571D2E514E5E44B00360C40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E571D2BC14E5E44B00360C40 /* Project object */;
+}
