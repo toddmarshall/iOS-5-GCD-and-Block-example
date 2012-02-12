@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <dispatch/dispatch.h>
+#import "DataConnector.h"
+#import "Validator.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
+{
+    DataConnector * dataConnector;
+    Validator * validator;
+}
 
+@property (nonatomic, strong) IBOutlet UITextField *urlTextField;
+@property (nonatomic, strong) IBOutlet UITextView *textView;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *spinner;
+@property (nonatomic, strong) IBOutlet UIButton *loadButton;
+
+
+- (IBAction) loadUrl;
 @end

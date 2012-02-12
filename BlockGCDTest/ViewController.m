@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import <dispatch/dispatch.h>
+
+@interface ViewController(Private)
+- (void) validateUrlField:(NSString *) urlString;
+@end
 
 @implementation ViewController
+@synthesize loadButton, urlTextField, textView, spinner;
 
 - (void)didReceiveMemoryWarning
 {
@@ -22,6 +28,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self.loadButton setEnabled:NO];
+    [self.urlTextField setDelegate:self];
+    
+    dataConnector = [[DataConnector alloc] init];
+    validator = [[Validator alloc] init];
 }
 
 - (void)viewDidUnload
@@ -54,7 +65,74 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return NO;
 }
+
+// regular expression for checking to see if a url is potentially valid
+
+
+#pragma mark datasource
+- (IBAction) loadUrl {
+
+    // start the load 
+    [self.loadButton setEnabled:NO];
+    [self.spinner startAnimating];
+    [dataConnector getContentsOfURLFromString:[self.urlTextField text] 
+                                  withSuccessBlock:(DataConnectorSuccessBlock)^(NSString * resultString) {
+                                      [self.textView setText:resultString];
+                                      [self.spinner stopAnimating];
+                                      [self.loadButton setEnabled:YES];
+                                      [self.urlTextField setBackgroundColor:[UIColor whiteColor]];
+                                  
+                                  } 
+                                  withFailureBlock:(DataConnectorFailureBlock)^(NSError * error) {
+                                      [self.textView setText:[error description]];
+                                      [self.spinner stopAnimating];
+                                      [self.loadButton setEnabled:NO];
+                                      [self.urlTextField setBackgroundColor:[UIColor redColor]];
+                                  
+                                  }];
+        
+    
+}
+
+- (void) validateUrlField:(NSString *) urlString
+{
+    // check to see if it's a potentially valid url
+    [validator validateUrl:urlString
+          withSuccessBlock:(ValidatorSuccessBlock)^{
+              [self.loadButton setEnabled:YES];
+              [self.urlTextField setBackgroundColor:[UIColor whiteColor]];
+          } 
+          withFailureBlock:(ValidatorFailureBlock)^{
+              [self.loadButton setEnabled:NO];
+              [self.urlTextField setBackgroundColor:[UIColor redColor]];
+          }];
+}
+
+#pragma mark delegates
+- (void) textFieldDidEndEditing:(UITextField *)textField
+{
+    // get the text
+    NSString * url = [self.urlTextField text];
+    [self validateUrlField:url];
+    
+    
+}
+- (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSString * url = [self.urlTextField text];
+    [self validateUrlField:url];
+    return YES;
+}
+
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+
 
 @end
