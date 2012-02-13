@@ -23,24 +23,21 @@
                    withFailureBlock:(DataConnectorFailureBlock) failureBlock
 {
 
-    
+    // run the dataload on another thread so we don't block the main thread that handles the interface
     dispatch_async(backgroundQueue, ^{
         NSError * error = nil;
         NSURL * url = [NSURL URLWithString:urlString];
         NSString * results = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:&error];
         
-        if (error) {
-            dispatch_async(dispatch_get_main_queue(), ^{
+        // execute this block on the main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
                 failureBlock(error);
-            });
-            
-        }
-        else
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
+            }
+            else {
                 successBlock(results);
-            });
-        }
+            }
+        });
         
     });
     

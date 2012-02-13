@@ -19,6 +19,7 @@
 
 - (void) validateUrl: (NSString *) candidate withSuccessBlock:(ValidatorSuccessBlock)successBlock withFailureBlock:(ValidatorFailureBlock) failBlock {
     
+    // execute the block on another thread
     dispatch_async(backgroundQueue, ^{
         NSString *urlRegEx =
         @"(http|https)://((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+";
@@ -26,6 +27,7 @@
         BOOL result = [urlTest evaluateWithObject:candidate];
         
         
+            // execute this block on the main thread
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (result) 
                     successBlock();

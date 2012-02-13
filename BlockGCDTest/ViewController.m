@@ -65,7 +65,13 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return NO;
+    if (UIInterfaceOrientationIsPortrait(interfaceOrientation)) {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 // regular expression for checking to see if a url is potentially valid
@@ -77,6 +83,8 @@
     // start the load 
     [self.loadButton setEnabled:NO];
     [self.spinner startAnimating];
+    
+    // dataConnector call using blocks.  I like the way it keeps all of the code in the same place instead of spreading it accross multiple delegate calls
     [dataConnector getContentsOfURLFromString:[self.urlTextField text] 
                                   withSuccessBlock:(DataConnectorSuccessBlock)^(NSString * resultString) {
                                       [self.textView setText:resultString];
